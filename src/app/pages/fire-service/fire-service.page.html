@@ -1,0 +1,119 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Fire Service</p>
+        </div>
+        <div class="home">
+          <img (click)="home()" src="/assets/icon/home.svg" alt="" />
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="form">
+        <div class="container-inner">
+          <div class="image">
+            <img
+              class="actualImage"
+              (click)="selectImage()"
+              [class.actualImage]="!setImage"
+              [class.actualImage2]="setImage"
+              [src]="displayImage"
+              alt=""
+            />
+          </div>
+
+          <ion-input
+            class="inputName"
+            [(ngModel)]="contactNumber"
+            type="tel"
+            placeholder="Contact Number"
+          ></ion-input>
+          <div class="map">
+            <p class="addressText">Address</p>
+            <div #map id="map"></div>
+            <p
+              *ngIf="!addAddressManually"
+              (click)="addAddress()"
+              class="addManually"
+            >
+              Add Manually..?
+            </p>
+            <ion-input
+              [class.show]="addAddressManually"
+              [class.hide]="!addAddressManually"
+              [(ngModel)]="address"
+              class="inputName"
+              #autocomplete
+              placeholder="Add Address"
+            ></ion-input>
+          </div>
+          <p class="error" *ngIf="error.status">{{error.message}}</p>
+        </div>
+      </div>
+
+      <div class="container-inner">
+        <ion-button
+          [disabled]="isLoading"
+          (click)="sendReport()"
+          class="btn_send_report ion-text-uppercase"
+        >
+          <div *ngIf="isLoading" class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <span *ngIf="!isLoading" class="socialText">Send Report</span>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,47 @@
+.header,
+ion-content {
+  font-family: "Poppins", sans-serif;
+}
+ion-content {
+  --background: #f7f7f7;
+}
+
+.backSvg {
+  fill: #fff;
+}
+.headBg {
+  background: #ffa200;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.TopHead {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+div#map {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100vh;
+  margin-top: -20px;
+  z-index: 999;
+}
+
+::ng-deep .gm-style .gm-style-iw-c button {
+  display: none !important;
+}
+// ::ng-deep .gm-style-iw-t {
+//   bottom: -120px !important;
+// }
+// ::ng-deep .gm-style .gm-style-iw-t::after {
+//   top: -115px !important;
+//   transform: translate(-50%, -50%) rotate(-223deg) !important;
+//   width: 15px !important;
+// }

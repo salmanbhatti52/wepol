@@ -1,0 +1,243 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Help</p>
+        </div>
+        <div class="home">
+          <svg
+            (click)="home()"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30.499"
+            height="30.503"
+            viewBox="0 0 30.499 30.503"
+          >
+            <defs>
+              <style>
+                .home {
+                  fill: #000;
+                }
+              </style>
+            </defs>
+            <path
+              xmlns="http://www.w3.org/2000/svg"
+              class="home"
+              d="M29.68,13.267l0,0L17.235.822a2.807,2.807,0,0,0-3.971,0L.828,13.258l-.013.013a2.807,2.807,0,0,0,1.869,4.784q.043,0,.087,0h.5v9.157A3.29,3.29,0,0,0,6.553,30.5h4.868a.894.894,0,0,0,.894-.894V22.429a1.5,1.5,0,0,1,1.5-1.5h2.871a1.5,1.5,0,0,1,1.5,1.5v7.179a.894.894,0,0,0,.894.894h4.868a3.29,3.29,0,0,0,3.287-3.286V18.059h.46a2.808,2.808,0,0,0,1.987-4.793Zm0,0"
+              transform="translate(0 0.001)"
+            />
+            transform="translate(0 0.001)" />
+          </svg>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="icon">
+          <svg
+            class="info"
+            [class.infoActive]="showHelpCall"
+            (click)="toggleShowHelp('showHelpCall')"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 11.526 11.526"
+          >
+            <path
+              class="infoPanic"
+              d="M7.169,1.406a5.763,5.763,0,1,0,5.763,5.763A5.762,5.762,0,0,0,7.169,1.406ZM7.7,9.829H6.637V5.837H7.7ZM7.166,5.4a.553.553,0,1,1,.574-.554A.555.555,0,0,1,7.166,5.4Z"
+              transform="translate(-1.406 -1.406)"
+            />
+          </svg>
+
+          <svg
+            (click)="gotoHelpDetail()"
+            *ngIf="!showHelpCall"
+            xmlns="http://www.w3.org/2000/svg"
+            width="42"
+            height="42"
+            viewBox="0 0 35.995 36.041"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: #3b5998;
+                }
+              </style>
+            </defs>
+            <path
+              class="a"
+              d="M4.16,10.755a2.652,2.652,0,0,1,.675-1.44l5.4-5.4q.631-.54.945.18l4.365,8.19a1.178,1.178,0,0,1-.225,1.4l-1.98,1.98a2.239,2.239,0,0,0-.63,1.4A6.869,6.869,0,0,0,14.1,20.52a29.59,29.59,0,0,0,2.745,3.6l1.4,1.439c.42.42.959.938,1.621,1.552a27.167,27.167,0,0,0,3.261,2.43A7.3,7.3,0,0,0,26.7,31.05a1.959,1.959,0,0,0,1.44-.585l2.341-2.34a.989.989,0,0,1,1.349-.18l7.876,4.635a.658.658,0,0,1,.36.472.575.575,0,0,1-.18.518l-5.4,5.4a2.645,2.645,0,0,1-1.439.674,10.887,10.887,0,0,1-4.974-.607,22.5,22.5,0,0,1-5.129-2.452q-2.363-1.529-4.387-3.1t-3.24-2.7l-1.17-1.126Q13.7,29.2,12.96,28.416t-2.59-3.1A45.194,45.194,0,0,1,7.175,20.79a26.382,26.382,0,0,1-2.34-5.017A10.674,10.674,0,0,1,4.16,10.755Z"
+              transform="translate(-4.084 -3.684)"
+            />
+          </svg>
+
+          <div (click)="gotoHelpDetail()" class="iconTextDiv">
+            <p *ngIf="!showHelpCall" class="iconText">Call National</p>
+            <p *ngIf="!showHelpCall" class="iconText">Emergency</p>
+            <p *ngIf="!showHelpCall" class="iconText">Number</p>
+          </div>
+          <p (click)="gotoHelpDetail()" *ngIf="showHelpCall" class="infoText">
+            Click to call phone, chat icon, however you will be fined if you're
+            raising false alarms
+          </p>
+        </div>
+        <div class="icon">
+          <svg
+            class="info"
+            [class.infoActive]="showHelpFire"
+            (click)="toggleShowHelp('showHelpFire')"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 11.526 11.526"
+          >
+            <path
+              class="infoPanic"
+              d="M7.169,1.406a5.763,5.763,0,1,0,5.763,5.763A5.762,5.762,0,0,0,7.169,1.406ZM7.7,9.829H6.637V5.837H7.7ZM7.166,5.4a.553.553,0,1,1,.574-.554A.555.555,0,0,1,7.166,5.4Z"
+              transform="translate(-1.406 -1.406)"
+            />
+          </svg>
+
+          <svg
+            (click)="gotoFireService()"
+            *ngIf="!showHelpFire"
+            xmlns="http://www.w3.org/2000/svg"
+            width="42"
+            height="42"
+            viewBox="0 0 33.48 38.561"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: #3b5998;
+                }
+              </style>
+            </defs>
+            <path
+              class="a"
+              d="M15.3,40.971c-2.57-5.348-1.2-8.412.774-11.3a18,18,0,0,0,2.72-6.291,7.392,7.392,0,0,1,1.02,5.668,14.3,14.3,0,0,0,3.117-10.712c6.79,4.745,9.692,15.02,5.781,22.634,20.8-11.769,5.174-29.379,2.453-31.363.907,1.984,1.079,5.342-.753,6.971C27.314,4.82,19.646,2.41,19.646,2.41c.907,6.064-3.287,12.7-7.332,17.651a13.107,13.107,0,0,0-1.565-6.4c-.285,4.393-3.643,7.974-4.552,12.375C4.967,32,7.121,36.36,15.3,40.971Z"
+              transform="translate(-5.877 -2.41)"
+            />
+          </svg>
+
+          <div
+            (click)="gotoFireService()"
+            *ngIf="!showHelpFire"
+            class="iconTextDiv"
+          >
+            <p class="iconText">Fire</p>
+            <p class="iconText">Service</p>
+          </div>
+          <p (click)="gotoFireService()" *ngIf="showHelpFire" class="infoText">
+            Opens fire service contact page
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="icon">
+          <svg
+            class="info"
+            [class.infoActive]="showHelpFriend"
+            (click)="toggleShowHelp('showHelpFriend')"
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 11.526 11.526"
+          >
+            <path
+              class="infoPanic"
+              d="M7.169,1.406a5.763,5.763,0,1,0,5.763,5.763A5.762,5.762,0,0,0,7.169,1.406ZM7.7,9.829H6.637V5.837H7.7ZM7.166,5.4a.553.553,0,1,1,.574-.554A.555.555,0,0,1,7.166,5.4Z"
+              transform="translate(-1.406 -1.406)"
+            />
+          </svg>
+
+          <svg
+            (click)="gotoTrustedFriend()"
+            *ngIf="!showHelpFriend"
+            xmlns="http://www.w3.org/2000/svg"
+            width="42"
+            height="42"
+            viewBox="0 0 56.25 39.375"
+          >
+            <defs>
+              <style>
+                .a {
+                  fill: #3b5998;
+                }
+              </style>
+            </defs>
+            <path
+              class="a"
+              d="M16.875,22.5a9.844,9.844,0,1,0-9.844-9.844A9.839,9.839,0,0,0,16.875,22.5Zm6.75,2.813H22.9a13.591,13.591,0,0,1-12.041,0h-.729A10.128,10.128,0,0,0,0,35.438v2.531a4.22,4.22,0,0,0,4.219,4.219H29.531a4.22,4.22,0,0,0,4.219-4.219V35.438A10.128,10.128,0,0,0,23.625,25.313ZM42.188,22.5a8.438,8.438,0,1,0-8.437-8.437A8.44,8.44,0,0,0,42.188,22.5Zm4.219,2.813h-.334a11.083,11.083,0,0,1-7.77,0h-.334a9.762,9.762,0,0,0-4.9,1.354,12.862,12.862,0,0,1,3.489,8.771v3.375c0,.193-.044.378-.053.563H52.031a4.22,4.22,0,0,0,4.219-4.219A9.839,9.839,0,0,0,46.406,25.313Z"
+              transform="translate(0 -2.813)"
+            />
+          </svg>
+
+          <div
+            (click)="gotoTrustedFriend()"
+            *ngIf="!showHelpFriend"
+            class="iconTextDiv"
+          >
+            <p class="iconText">Trusted</p>
+            <p class="iconText">Friend</p>
+          </div>
+          <p
+            (click)="gotoTrustedFriend()"
+            *ngIf="showHelpFriend"
+            class="infoText"
+          >
+            Call a trusted friend mobile and sends location along with other
+            information
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

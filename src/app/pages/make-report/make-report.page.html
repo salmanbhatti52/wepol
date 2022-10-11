@@ -1,0 +1,265 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Make A Report</p>
+        </div>
+        <div class="home">
+          <img (click)="home()" src="/assets/icon/home.svg" alt="" />
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="container">
+        <p class="inputLabel">Report category</p>
+        <div class="selectInput">
+          <ion-input
+            class="input"
+            [(ngModel)]="category"
+            readonly
+            placeholder="Select category"
+            (click)="toggleOption()"
+          ></ion-input>
+
+          <div *ngIf="displayOption" class="options">
+            <ion-input
+              #el1
+              (click)="selectOption(el1)"
+              class="option"
+              readonly
+              value="Robbery/Burglary"
+            ></ion-input>
+            <ion-input
+              #el2
+              (click)="selectOption(el2)"
+              class="option"
+              readonly
+              value="Kidnapping"
+            ></ion-input>
+            <ion-input
+              #el3
+              (click)="selectOption(el3)"
+              class="option"
+              readonly
+              value="Fighting"
+            ></ion-input>
+            <ion-input
+              #el4
+              (click)="selectOption(el4)"
+              class="option"
+              readonly
+              value="Riot"
+            ></ion-input>
+            <ion-input
+              #el5
+              (click)="selectOption(el5)"
+              class="option"
+              readonly
+              value="Fire"
+            ></ion-input>
+            <ion-input
+              #el6
+              (click)="selectOption(el6)"
+              class="option"
+              readonly
+              value="Domestic Violence"
+            ></ion-input>
+            <ion-input
+              #el7
+              (click)="selectOption(el7)"
+              class="option"
+              readonly
+              value="Traffic Accident"
+            ></ion-input>
+          </div>
+          <div class="dorpIcon">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              class="polygon"
+              width="15"
+              height="13"
+              viewBox="0 0 330 330"
+              style="enable-background: new 0 0 330 330"
+              xml:space="preserve"
+            >
+              <path
+                id="XMLID_225_"
+                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+              />
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+              <g></g>
+            </svg>
+          </div>
+        </div>
+        <ion-button
+          *ngIf="!makeReport"
+          (click)="showForm()"
+          class="btn_make_report ion-text-uppercase"
+        >
+          Make A Report
+        </ion-button>
+      </div>
+
+      <div [class.show]="form1" [class.hide]="!form1" class="form">
+        <div class="container">
+          <div class="image">
+            <img
+              class="actualImage"
+              (click)="selectImage()"
+              [class.actualImage]="!setImage"
+              [class.actualImage2]="setImage"
+              [src]="displayImage"
+              alt=""
+            />
+          </div>
+
+          <ion-input
+            class="inputName"
+            [(ngModel)]="name"
+            type="text"
+            placeholder="Name"
+          ></ion-input>
+          <div class="map">
+            <p class="addressText">Address</p>
+            <div #map id="map"></div>
+            <p
+              *ngIf="!addAddressManually"
+              (click)="addAddress()"
+              class="addManually"
+            >
+              Add Manually..?
+            </p>
+            <ion-input
+              [class.show]="addAddressManually"
+              [class.hide]="!addAddressManually"
+              [(ngModel)]="address"
+              class="inputName"
+              #autocomplete
+              placeholder="Add Address"
+            ></ion-input>
+          </div>
+          <ion-textarea
+            [(ngModel)]="note"
+            class="textArea"
+            rows="3"
+            cols="20"
+            placeholder="Write note..."
+          ></ion-textarea>
+          <p class="error" *ngIf="error.status">{{error.message}}</p>
+        </div>
+      </div>
+      <div [class.show]="form2" [class.hide]="!form2" class="form2">
+        <div class="container">
+          <p class="addressText">Address</p>
+          <div #map2 id="map2"></div>
+          <p
+            *ngIf="!addAddressManually"
+            (click)="addAddress()"
+            class="addManually"
+          >
+            Add Manually..?
+          </p>
+          <ion-input
+            class="inputName"
+            [class.show]="addAddressManually"
+            [class.hide]="!addAddressManually"
+            #autocompleteTraffic
+            type="text"
+            placeholder="Add Address"
+          ></ion-input>
+          <ion-textarea
+            [(ngModel)]="note"
+            class="textArea"
+            rows="3"
+            cols="20"
+            placeholder="Write note..."
+          ></ion-textarea>
+          <p class="error" *ngIf="error.status">{{error.message}}</p>
+        </div>
+      </div>
+      <div class="container">
+        <ion-button
+          [disabled]="isLoading"
+          *ngIf="makeReport"
+          (click)="sendReport()"
+          class="btn_send_report ion-text-uppercase"
+        >
+          <div *ngIf="isLoading" class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <span *ngIf="!isLoading" class="socialText">Send Report</span>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

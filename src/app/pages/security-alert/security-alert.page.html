@@ -1,0 +1,170 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Security Alert</p>
+        </div>
+        <div class="home">
+          <img (click)="home()" src="/assets/icon/home.svg" alt="" />
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="spinner">
+        <div *ngIf="isLoading" class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div *ngIf="!isLoading" class="erro">
+        <p *ngIf="reports.length===0" class="notFound">No reports found!</p>
+      </div>
+      <div *ngIf="reports.length>0" class="list">
+        <div *ngFor="let report of reports" class="listItem">
+          <div
+            [class.content]="report.title === 'Traffic Accident'"
+            [class.contentGrid]="report.title !== 'Traffic Accident'"
+          >
+            <div class="body">
+              <p class="listTitle">{{report.title}}</p>
+              <div *ngIf="report.message" class="note">
+                <ion-icon
+                  class="chatBoxIcon"
+                  name="chatbox-ellipses"
+                ></ion-icon>
+                <p class="chatBoxText">{{report.message}}</p>
+              </div>
+              <div class="location">
+                <svg
+                  class="locationIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9.98"
+                  height="13.63"
+                  viewBox="0 0 31.373 42.848"
+                >
+                  <defs>
+                    <style>
+                      .loca {
+                        fill: #585858;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="loca"
+                    d="M29.611,3.213A15.687,15.687,0,0,0,13.925,18.9c0,15.687,15.687,27.161,15.687,27.161S45.3,34.587,45.3,18.9A15.687,15.687,0,0,0,
+                    29.611,3.213Zm0,25.295A9.608,9.608,0,1,1,39.219,18.9,9.608,9.608,0,0,1,29.611,28.508ZM23.533,18.9a6.079,6.079,0,1,1,6.079,6.079A6.079,6.079,0,0,1,23.533,18.9Z"
+                    transform="translate(-13.925 -3.213)"
+                  />
+                </svg>
+                <p class="locationText">{{report.address}}</p>
+              </div>
+              <div class="date">
+                <svg
+                  class="dateIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10.647"
+                  height="11.83"
+                  viewBox="0 0 10.647 11.83"
+                >
+                  <defs>
+                    <style>
+                      .datea {
+                        fill: #585858;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="datea"
+                    d="M11.049,10.323H9.866v1.183h1.183Zm2.366,0H12.232v1.183h1.183Zm2.366,0H14.6v1.183h1.183Zm1.183-4.14h-.591V5H15.189V6.183H10.457V5H9.274V6.183H8.683A1.178,1.178,0,0,0,7.506,7.366L7.5,15.647A1.183,1.183,0,0,0,8.683,16.83h8.281a1.186,1.186,0,0,0,1.183-1.183V7.366A1.186,1.186,0,0,0,16.964,6.183Zm0,9.464H8.683V9.14h8.281Z"
+                    transform="translate(-7.5 -5)"
+                  />
+                </svg>
+                <p class="dateText">{{report.date}}</p>
+                <div class="time">
+                  <svg
+                    class="timeIcon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11.83"
+                    height="11.83"
+                    viewBox="0 0 11.83 11.83"
+                  >
+                    <defs>
+                      <style>
+                        .timea {
+                          fill: #585858;
+                        }
+                      </style>
+                    </defs>
+                    <path
+                      class="timea"
+                      d="M10.909,5a5.915,5.915,0,1,0,5.921,5.915A5.912,5.912,0,0,0,10.909,5Zm.006,10.647a4.732,4.732,0,1,1,4.732-4.732A4.731,4.731,0,0,1,10.915,15.647Zm.3-7.689h-.887v3.549l3.105,1.863.444-.728-2.662-1.579Z"
+                      transform="translate(-5 -5)"
+                    />
+                  </svg>
+                  <p class="timeText">{{report.time}}</p>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="report.title !== 'Traffic Accident'" class="image">
+              <img
+                (click)="openImage(report.image)"
+                class="actualImage"
+                [src]="report.image"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

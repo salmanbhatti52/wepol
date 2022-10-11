@@ -1,0 +1,235 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Help</p>
+        </div>
+        <div class="home">
+          <img (click)="home()" src="/assets/icon/home.svg" alt="" />
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="56.25"
+          height="39.375"
+          viewBox="0 0 56.25 39.375"
+        >
+          <defs>
+            <style>
+              .frienda {
+                fill: #ffa200;
+              }
+            </style>
+          </defs>
+          <path
+            class="frienda"
+            d="M16.875,22.5a9.844,9.844,0,1,0-9.844-9.844A9.839,9.839,0,0,0,16.875,22.5Zm6.75,2.813H22.9a13.591,13.591,0,0,1-12.041,0h-.729A10.128,10.128,0,0,0,0,35.438v2.531a4.22,4.22,0,0,0,4.219,4.219H29.531a4.22,4.22,0,0,0,4.219-4.219V35.438A10.128,10.128,0,0,0,23.625,25.313ZM42.188,22.5a8.438,8.438,0,1,0-8.437-8.437A8.44,8.44,0,0,0,42.188,22.5Zm4.219,2.813h-.334a11.083,11.083,0,0,1-7.77,0h-.334a9.762,9.762,0,0,0-4.9,1.354,12.862,12.862,0,0,1,3.489,8.771v3.375c0,.193-.044.378-.053.563H52.031a4.22,4.22,0,0,0,4.219-4.219A9.839,9.839,0,0,0,46.406,25.313Z"
+            transform="translate(0 -2.813)"
+          />
+        </svg>
+        <p class="title">Trusted Friend</p>
+      </div>
+      <div *ngIf="form" class="form">
+        <div class="container">
+          <p class="formHead">Add trusted friend</p>
+          <ion-input
+            [(ngModel)]="friendName"
+            class="friendName"
+            type="text"
+            placeholder="Enter your friend name"
+          ></ion-input>
+          <ion-grid>
+            <ion-row class="ion-justify-content-between">
+              <ion-col class="code" size="3">
+                <ion-input
+                  readonly
+                  maxlength="3"
+                  class="countryCode"
+                  type="tel"
+                  value="{{countryCode}}"
+                ></ion-input>
+              </ion-col>
+              <ion-col size="8">
+                <ion-input
+                  [(ngModel)]="friendNumber"
+                  class="friendNumber"
+                  type="tel"
+                  placeholder="Enter number"
+                ></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <p class="error" *ngIf="error.status">{{error.message}}</p>
+          <ion-button
+            [disabled]="isLoading"
+            (click)="addFriend()"
+            class="btn_conf ion-text-uppercase"
+          >
+            <div *ngIf="isLoading" class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span *ngIf="!isLoading" class="socialText">Confirm</span>
+          </ion-button>
+        </div>
+      </div>
+      <div *ngIf="form3" class="form">
+        <div class="container">
+          <p class="formHead">Add trusted friend</p>
+          <ion-input
+            [(ngModel)]="addFri.addfriendName"
+            class="friendName"
+            type="text"
+            placeholder="Enter your friend name"
+          ></ion-input>
+          <ion-grid>
+            <ion-row class="ion-justify-content-between">
+              <ion-col class="code" size="3">
+                <ion-input
+                  readonly
+                  maxlength="3"
+                  class="countryCode"
+                  type="tel"
+                  value="{{countryCode}}"
+                ></ion-input>
+              </ion-col>
+              <ion-col size="8">
+                <ion-input
+                  [(ngModel)]="addFri.addfriendNumber"
+                  class="friendNumber"
+                  type="tel"
+                  placeholder="Enter number"
+                ></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <p class="error" *ngIf="form3error.status">{{form3error.message}}</p>
+          <ion-button
+            [disabled]="isLoading3"
+            (click)="additionalFriend()"
+            class="btn_conf ion-text-uppercase"
+          >
+            <div *ngIf="isLoading3" class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span *ngIf="!isLoading3" class="socialText">Confirm</span>
+          </ion-button>
+        </div>
+      </div>
+      <div *ngIf="form" class="container">
+        <div class="addBtn">
+          <img (click)="addNewFriend()" src="/assets/icon/add.svg" alt="" />
+        </div>
+      </div>
+      <div *ngIf="!form" class="trustedFriends">
+        <div class="spinner">
+          <div *ngIf="isLoading" class="lds-ring2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="detail" *ngFor="let friend of trustedFriends">
+          <svg
+            *ngIf="!isLoading"
+            (click)="editFriend(friend)"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32.275"
+            height="32.275"
+            viewBox="0 0 32.275 32.275"
+          >
+            <g transform="translate(-0.001)">
+              <g transform="translate(0.001)">
+                <path
+                  d="M16.138,0A16.137,16.137,0,1,0,32.276,16.137,16.137,16.137,0,0,0,16.138,0Zm7.671,11.613-1.533,1.533-3.12-3.12L17.973,11.21l3.12,3.12L13.44,21.981l-3.12-3.119L9.137,20.046l3.12,3.12-.763.763-.015-.015a.6.6,0,0,1-.385.277l-2.909.649a.6.6,0,0,1-.722-.722l.648-2.908a.606.606,0,0,1,.277-.385l-.015-.015L20.689,8.493a.463.463,0,0,1,.654,0l2.466,2.465A.463.463,0,0,1,23.809,11.613Z"
+                  transform="translate(-0.001)"
+                />
+              </g>
+            </g>
+          </svg>
+          <p *ngIf="!isLoading" class="fName">{{friend.F_Name}}</p>
+          <p *ngIf="!isLoading" class="fNumber">{{friend.F_number}}</p>
+        </div>
+        <p *ngIf="!isLoading" class="notice">
+          Your friend will receive call from you, we will also send him your
+          exact location and other information
+        </p>
+        <p class="error" *ngIf="error.status">{{error.message}}</p>
+        <div *ngIf="!isLoading" (click)="sendSos()" class="panicButton">
+          <div class="panicBtn">
+            <div *ngIf="sendingLoading" class="panicText2">
+              <div class="lds-ring3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <div *ngIf="!sendingLoading" class="panicText">
+              <p>SEND</p>
+              <p>SOS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

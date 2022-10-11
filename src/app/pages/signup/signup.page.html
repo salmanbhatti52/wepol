@@ -1,0 +1,247 @@
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="header">
+      <svg
+        (click)="back()"
+        class="backSvg"
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="14.25px"
+        height="20.43px"
+        viewBox="0 0 792.082 792.082"
+        style="enable-background: new 0 0 792.082 792.082"
+        xml:space="preserve"
+      >
+        <g>
+          <g id="_x37__34_">
+            <g>
+              <path
+                d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+              c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+              c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+              />
+            </g>
+          </g>
+        </g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+        <g></g>
+      </svg>
+      <p class="title">WePol</p>
+      <div class="container">
+        <p class="subTitle">
+          Community Policing at its best! Lets look out for each other!
+        </p>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <p class="titleLogin">Sign Up</p>
+    <p class="titleLogin">New Account</p>
+    <div class="form">
+      <p *ngIf="error.status" class="error">{{error.message}}</p>
+      <p *ngIf="usernameError.status" class="error">
+        {{usernameError.message}}
+      </p>
+      <ion-input
+        class="input"
+        [(ngModel)]="username"
+        type="text"
+        placeholder="Username"
+      ></ion-input>
+      <p *ngIf="emailError.status" class="error">{{emailError.message}}</p>
+      <ion-input
+        class="input"
+        [(ngModel)]="email"
+        type="text"
+        placeholder="Email"
+      ></ion-input>
+      <p *ngIf="passwordError.status" class="error">
+        {{passwordError.message}}
+      </p>
+      <div class="passwordDiv">
+        <ion-input
+          class="input"
+          [(ngModel)]="password"
+          type="{{showPass ? 'text':'password' }}"
+          placeholder="Password"
+        ></ion-input>
+        <ion-icon
+          *ngIf="!showPass"
+          (click)="togglePass()"
+          class="eye"
+          name="eye"
+        ></ion-icon>
+        <ion-icon
+          *ngIf="showPass"
+          (click)="togglePass()"
+          class="eye"
+          name="eye-off"
+        ></ion-icon>
+      </div>
+      <p *ngIf="confirmPasswordError.status" class="error">
+        {{confirmPasswordError.message}}
+      </p>
+      <div class="confirmPasswordDiv">
+        <ion-input
+          class="input"
+          [(ngModel)]="confirmPassword"
+          type="{{showConPass ? 'text':'password' }}"
+          placeholder="Confirm Password"
+        ></ion-input>
+        <ion-icon
+          *ngIf="!showConPass"
+          (click)="toggleConPass()"
+          class="eye"
+          name="eye"
+        ></ion-icon>
+        <ion-icon
+          *ngIf="showConPass"
+          (click)="toggleConPass()"
+          class="eye"
+          name="eye-off"
+        ></ion-icon>
+      </div>
+    </div>
+    <ion-button
+      [disabled]="isLoading"
+      (click)="signup()"
+      class="btn_signup ion-text-uppercase"
+    >
+      <div *ngIf="isLoading" class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span *ngIf="!isLoading">SignUp</span>
+    </ion-button>
+    <p class="ion-text-center ion-text-uppercase or">or</p>
+    <ion-button [disabled]="fbSignUp" (click)="loginWithFB()" class="btn_fb">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26.827"
+        height="26.827"
+        viewBox="0 0 26.827 26.827"
+        class="fbIcon"
+      >
+        <defs>
+          <style>
+            .fa {
+              fill: #eef3ff;
+            }
+            .fb {
+              fill: #3b5998;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-72 -656.513)">
+          <ellipse
+            class="fa"
+            cx="13.414"
+            cy="13.414"
+            rx="13.414"
+            ry="13.414"
+            transform="translate(72 656.513)"
+          />
+          <path
+            class="fb"
+            d="M45.556,30.5H43.163v8.769H39.537V30.5H37.812V27.416h1.725V25.422A3.4,3.4,0,0,1,43.2,21.763l2.686.011v2.991H43.932a.738.738,0,0,0-.769.84v1.814h2.71Z"
+            transform="translate(43.229 639.953)"
+          />
+        </g>
+      </svg>
+      <div *ngIf="fbSignUp" class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p *ngIf="!fbSignUp" class="socialText">Sign Up With Facebook</p>
+    </ion-button>
+    <ion-button
+      [disabled]="googleSignUp"
+      (click)="googlePlusSignup()"
+      class="btn_google"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26.196"
+        height="26.196"
+        viewBox="0 0 26.196 26.196"
+        class="googleIcon"
+      >
+        <defs>
+          <style>
+            .ga {
+              fill: #fff;
+            }
+            .gb {
+              fill: #dc4e41;
+            }
+          </style>
+        </defs>
+        <g transform="translate(-104 -680)">
+          <g transform="translate(104 680)">
+            <ellipse
+              class="ga"
+              cx="13.098"
+              cy="13.098"
+              rx="13.098"
+              ry="13.098"
+            />
+          </g>
+          <g transform="translate(108.512 688.276)">
+            <path
+              class="gb"
+              d="M19.52,40.854a5.4,5.4,0,0,0,3.641,5.106,5.327,5.327,0,0,0,5.822-1.552,6.1,6.1,0,0,0,1.093-4.319c-1.722-.015-3.445-.01-5.165-.008,0,.614,0,1.225,0,1.838,1.031.028,2.063.015,3.094.036A2.984,2.984,0,0,1,26.255,44a3.411,3.411,0,1,1-2.3-6.418,3.793,3.793,0,0,1,3.192.624c.48-.449.928-.928,1.369-1.413a5.429,5.429,0,0,0-9,4.061Z"
+              transform="translate(-19.517 -35.446)"
+            />
+            <path
+              class="gb"
+              d="M74,48.668c-.005.513-.011,1.029-.013,1.542-.516.005-1.029.008-1.542.01v1.537c.513,0,1.029.005,1.542.011.005.513.005,1.026.01,1.542.511,0,1.024,0,1.537,0,0-.516.005-1.029.011-1.545l1.542-.008V50.22c-.513,0-1.029-.005-1.542-.01,0-.513-.008-1.029-.011-1.542Z"
+              transform="translate(-60.085 -45.581)"
+            />
+            <path
+              class="gb"
+              d="M19.52,40.853a5.429,5.429,0,0,1,9-4.061c-.441.485-.89.964-1.369,1.413a3.793,3.793,0,0,0-3.192-.624A3.411,3.411,0,1,0,26.255,44a2.984,2.984,0,0,0,1.753-2.045c-1.031-.021-2.063-.008-3.094-.036,0-.614-.005-1.225,0-1.838,1.72,0,3.442-.008,5.165.008a6.1,6.1,0,0,1-1.093,4.319,5.327,5.327,0,0,1-5.822,1.552A5.4,5.4,0,0,1,19.52,40.853Z"
+              transform="translate(-19.517 -35.445)"
+            />
+            <path
+              class="gb"
+              d="M74,48.668h1.534c0,.513.008,1.029.011,1.542.513.005,1.029.008,1.542.01v1.537l-1.542.008c-.005.516-.008,1.029-.011,1.545-.513,0-1.026,0-1.537,0,0-.516,0-1.029-.01-1.542-.513-.005-1.029-.008-1.542-.011V50.22q.77,0,1.542-.01C73.987,49.7,73.992,49.181,74,48.668Z"
+              transform="translate(-60.085 -45.581)"
+            />
+          </g>
+        </g>
+      </svg>
+      <div *ngIf="googleSignUp" class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p *ngIf="!googleSignUp" class="socialText">Sign Up With Google</p>
+    </ion-button>
+    <p class="loginLine">
+      Already have an account?
+      <span (click)="login()" class="login">Sign In</span>
+    </p>
+  </div>
+</ion-content>

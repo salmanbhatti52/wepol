@@ -1,0 +1,137 @@
+.header,
+ion-content {
+  font-family: "Poppins", sans-serif;
+}
+ion-content {
+  --background: #f7f7f7;
+}
+.backSvg {
+  fill: #fff;
+}
+.headBg {
+  --background: #ffa200;
+  --padding-top: 15px;
+  --padding-bottom: 30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.TopHead {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+.main {
+  border-radius: 20px;
+  position: relative;
+  margin-top: -20px;
+  padding: 11px;
+  padding-top: 20px;
+  padding-left: 9px;
+  background: #f7f7f7;
+  z-index: 999;
+}
+.listItem {
+  padding: 15px;
+  border-radius: 5px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffa200;
+}
+.body {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bodyText {
+  color: #000;
+  font-size: 14px;
+}
+.btn_sub {
+  width: 100%;
+  --background: #ffa200;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-top: 10px;
+  --box-shadow: none;
+}
+.btn_cancel {
+  width: 100%;
+  --background: #ff0000;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-top: 10px;
+  --box-shadow: none;
+}
+.code {
+  position: relative;
+}
+.downCode {
+  position: absolute;
+  top: 35%;
+  left: 88%;
+  z-index: 11;
+}
+.countryCode {
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  text-align: start;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+.chooseTime {
+  font-size: 14px;
+  text-align: start;
+  color: #ffa200;
+}
+.trackingMode {
+  font-size: 14px;
+  text-align: center;
+  color: #ff0000;
+  margin: 20px 0px;
+}
+.selectTime {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: 99;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+}
+.timeMin {
+  padding: 5px 0px 5px 0px;
+}

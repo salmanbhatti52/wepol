@@ -1,0 +1,7 @@
+{
+  "name": "webpol",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

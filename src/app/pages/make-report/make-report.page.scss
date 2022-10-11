@@ -1,0 +1,243 @@
+#map,
+#map2 {
+  height: 165px;
+  margin-bottom: 5px;
+}
+.header,
+ion-content {
+  font-family: "Poppins", sans-serif;
+}
+ion-content {
+  --background: #f7f7f7;
+}
+
+.backSvg {
+  fill: #fff;
+}
+.headBg {
+  --background: #ffa200;
+  --padding-top: 15px;
+  --padding-bottom: 30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.TopHead {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+.main {
+  border-radius: 20px;
+  position: relative;
+  margin-top: -20px;
+  padding: 11px;
+  padding-top: 20px;
+  padding-left: 9px;
+  background: #f7f7f7;
+  z-index: 999;
+}
+.inputLabel {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.input,
+.inputName {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.inputName,
+.textArea {
+  border: 1px solid #ffa200;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+.textArea {
+  border-radius: 5px;
+}
+.selectInput {
+  position: relative;
+  margin-bottom: 20px;
+}
+.options {
+  z-index: 9999;
+  margin-top: -8px;
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+}
+.option {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  border-radius: none;
+  background-color: #fff;
+  color: #002c53;
+  --placeholder-color: #002c53;
+  font-size: 14px;
+  margin: auto;
+  margin-top: -2px;
+  cursor: pointer;
+}
+.polygon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 10;
+}
+.notFoundDiv {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.notFound {
+  text-align: center;
+  font-weight: 400;
+  color: #002c53;
+  font-size: 15px;
+}
+.btn_make_report,
+.btn_send_report {
+  width: 100%;
+  --background: #ffa200;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+  margin: auto;
+  width: 100px;
+  height: 115px;
+}
+
+.addressText,
+.addManually {
+  font-size: 12px;
+}
+.addManually {
+  text-align: end;
+  color: #ffa200;
+}
+
+.form,
+.form2 {
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+.form2 {
+  padding-top: 10px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.searchLocation {
+  border-radius: 5px;
+  --border-radius: 5px;
+  --background: #fff;
+  border: 1px solid #ffa200;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  --placeholder-font-weight: 500;
+  --box-shadow: none;
+}
+::ng-deep input.searchbar-input.sc-ion-searchbar-md {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-inline-start: 15px !important;
+}
+::ng-deep .searchbar-input.sc-ion-searchbar-md {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  -webkit-padding-start: 15px !important;
+  padding-inline-start: 15px !important;
+  -webkit-padding-end: 15px !important;
+  padding-inline-end: 15px !important;
+}
+::ng-deep .gm-style .gm-style-iw-c button {
+  display: block !important;
+}
+.actualImage {
+  width: 100%;
+  height: 100%;
+}
+.actualImage2 {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ffa200;
+}
+//spinner
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.error {
+  font-size: 12px;
+  color: #ff0000;
+}

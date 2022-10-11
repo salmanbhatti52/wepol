@@ -1,0 +1,140 @@
+.header,
+.footer,
+ion-content {
+  font-family: "Poppins", sans-serif;
+  --background: #042060;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.backSvg {
+  fill: #fff;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.title {
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+.subTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titleVerifyEmail {
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 25px;
+}
+.form {
+  margin-top: 60px;
+}
+.btn_pin_confirm {
+  width: 100%;
+  --background: #ffa200;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  --padding-top: 23px;
+  --padding-bottom: 23px;
+  margin-top: 25px;
+}
+.pinLabel {
+  color: #fff;
+  font-size: 14px;
+}
+.pinInput {
+  height: 50px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin-right: 5px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+.pincode {
+  margin-top: 60px;
+  display: flex;
+}
+//spinner
+.spinner-div {
+  display: flex;
+  justify-content: center;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+.error {
+  color: #ffa200;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.sendAgainLine {
+  margin-top: 60px;
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.sendAgain {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 16px;
+}
+@media only screen and (min-height: 568px) {
+  .sendAgainLine {
+    margin-top: 10px;
+  }
+  .pincode {
+    margin-top: 10px;
+    display: flex;
+  }
+}
+@media only screen and (min-height: 630px) {
+  .sendAgainLine {
+    margin-top: 60px;
+  }
+  .pincode {
+    margin-top: 60px;
+    display: flex;
+  }
+}

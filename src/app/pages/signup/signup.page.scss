@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
+.header,
+.footer,
+ion-content {
+  font-family: "Poppins", sans-serif;
+  --background: #042060;
+}
+.backSvg {
+  fill: #fff;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.title {
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 40px;
+  margin-top: 5px;
+  text-align: center;
+}
+.subTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.titleLogin {
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+}
+.form {
+  margin-top: 10px;
+}
+.input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #002c53;
+  font-size: 14px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.btn_signup {
+  width: 100%;
+  --background: #ffa200;
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-bottom: 5px;
+}
+.btn_fb {
+  --background: #274c9a;
+}
+.btn_google {
+  --background: #c2463a;
+}
+.btn_fb,
+.btn_google {
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-bottom: 15px;
+}
+.or {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.fbIcon,
+.googleIcon {
+  position: absolute;
+  right: 85%;
+}
+.socialText {
+  text-transform: none;
+  padding-left: 20px;
+}
+.loginLine {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.login {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.passwordDiv,
+.confirmPasswordDiv {
+  position: relative;
+}
+.eye {
+  position: absolute;
+  z-index: 9;
+  width: 25px;
+  height: 25px;
+  color: #ffa200;
+  top: 20%;
+  left: 90%;
+}
+.error {
+  color: #ffa200;
+  font-size: 12px;
+  line-height: 20px;
+}
+//spinner
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-height: 568px) {
+  .backSvg {
+    margin-top: 5px;
+  }
+  .title {
+    font-size: 33px;
+    margin-top: 0px;
+  }
+  .subTitle {
+    font-size: 14px;
+  }
+  .titleLogin {
+    font-size: 16px;
+  }
+  .form {
+    margin-top: 5px;
+  }
+  .btn_signup {
+    margin-bottom: 5px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  .input {
+    margin-bottom: 5px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  .or {
+    margin-bottom: 5px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 10px;
+  }
+  .forgotPass {
+    margin-bottom: 5px;
+  }
+  .eye {
+    top: 20%;
+    left: 87%;
+  }
+  .fbIcon,
+  .googleIcon {
+    right: 89%;
+  }
+  .loginLine {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-height: 610px) {
+  .backSvg {
+    margin-top: 15px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .titleLogin {
+    font-size: 20px;
+  }
+  .form {
+    margin-top: 5px;
+  }
+  .btn_signup {
+    margin-bottom: 10px;
+  }
+  .or {
+    margin-bottom: 10px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 15px;
+  }
+  .forgotPass {
+    margin-bottom: 5px;
+  }
+  .eye {
+    top: 20%;
+    left: 88%;
+  }
+  .fbIcon,
+  .googleIcon {
+    right: 87%;
+  }
+}
+@media only screen and (min-height: 640px) {
+  .error {
+    color: #ffa200;
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  .title {
+    font-size: 43px;
+    margin-top: 0px;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-height: 665px) {
+  .title {
+    font-size: 38px;
+    margin-top: 0px;
+  }
+  .subTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 20px;
+  }
+  .btn_signup {
+    margin-bottom: 5px;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+  }
+  .input {
+    margin-bottom: 5px;
+    --padding-top: 15px;
+    --padding-bottom: 15px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .or {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .subTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 15px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 20px;
+    --padding-top: 23px;
+    --padding-bottom: 23px;
+  }
+  .btn_signup {
+    --padding-top: 23px;
+    --padding-bottom: 23px;
+  }
+}
+@media only screen and (min-height: 731px) {
+  .title {
+    font-size: 50px;
+  }
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .titleLogin {
+    font-size: 25px;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 20px;
+  }
+  .loginLine {
+    margin-top: 20px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-height: 736px) {
+  .subTitle {
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 20px;
+  }
+  .btn_signup {
+    margin-bottom: 10px;
+  }
+  .or {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .loginLine {
+    margin-top: 20px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .loginLine {
+    margin-top: 10px;
+  }
+  .subTitle {
+    margin-bottom: 30px;
+  }
+  .form {
+    margin-top: 30px;
+  }
+  .btn_signup {
+    margin-bottom: 10px;
+  }
+  .or {
+    margin-bottom: 10px;
+  }
+  .loginLine {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-height: 823px) {
+  .btn_signup {
+    margin-bottom: 20px;
+  }
+  .title {
+    margin-top: 15px;
+  }
+  .subTitle {
+    margin-bottom: 25px;
+  }
+  .form {
+    margin-top: 25px;
+  }
+  .input {
+    margin-bottom: 15px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 15px;
+  }
+  .loginLine {
+    margin-top: 35px;
+  }
+}

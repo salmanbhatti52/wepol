@@ -1,0 +1,338 @@
+.header,
+ion-content {
+  font-family: "Poppins", sans-serif;
+}
+ion-content {
+  --background: #ffa200;
+}
+.headBg {
+  --background: #f7f7f7;
+  --padding-right: 5px;
+  --padding-top: 12px;
+  --padding-bottom: 30px;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backSvg {
+  position: absolute;
+  top: 12px;
+  left: 30px;
+}
+.title {
+  text-align: center;
+}
+.TopHead {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: italic;
+}
+.logoutSvg {
+  position: absolute;
+  fill: #000000;
+  top: 20%;
+  left: 90%;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.main {
+  border-radius: 20px;
+  position: relative;
+  margin-top: -20px;
+  padding: 11px;
+  padding-top: 20px;
+  padding-left: 9px;
+  background: #ffa200;
+  z-index: 999;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 49%;
+  border-radius: 5px;
+  padding: 20px 2px 20px 2px;
+  text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconTextDiv {
+  margin-top: 5px;
+  width: 100%;
+}
+.iconText {
+  font-weight: 600;
+  font-size: 18px;
+  color: #3b5998;
+  line-height: 20px;
+}
+.panicButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.panicBtn {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+  text-align: center;
+  position: relative;
+  height: 140px;
+  width: 140px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: inline-block;
+}
+.panicText {
+  line-height: 25px;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -42px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+.infoPanic {
+  margin-top: 10px;
+  fill: #fff;
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 135px;
+  z-index: 10;
+  padding: 0px 5px 5px 5px;
+  border-radius: 5px;
+  position: absolute;
+  background: #fff;
+  text-align: center;
+}
+.infoText {
+  font-size: 10px;
+}
+.redInfo {
+  fill: #ff0000;
+  z-index: 11;
+}
+.panicTextLowOp {
+  opacity: 0.5;
+}
+.countDown {
+  margin: 10px 0px 0px 25px;
+}
+@media only screen and (min-height: 568px) {
+  .row {
+    margin-bottom: 7px;
+  }
+  .icon {
+    height: 115px;
+  }
+  .panicBtn {
+    height: 95px;
+    width: 95px;
+  }
+  .panicText {
+    line-height: 15px;
+    font-size: 14px;
+    margin-top: -16px;
+    margin-left: -26px;
+  }
+  .showTick {
+    width: 50px;
+    height: 36px;
+  }
+  .infoPanic {
+    width: 10px;
+    height: 10px;
+  }
+  .infoText {
+    font-size: 8px;
+  }
+  .infoDiv {
+    margin-top: 85px;
+  }
+  .countDown {
+    font-size: 30px;
+    margin: 8px 0px 0px 17px;
+  }
+}
+@media only screen and (min-height: 610px) {
+  .icon {
+    height: 125px;
+  }
+  .panicBtn {
+    height: 110px;
+    width: 110px;
+  }
+  .panicText {
+    line-height: 15px;
+    font-size: 14px;
+    margin-top: -16px;
+    margin-left: -26px;
+  }
+  .showTick {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media only screen and (min-height: 640px) {
+  .row {
+    margin-bottom: 7px;
+  }
+  .icon {
+    height: 125px;
+  }
+  .panicBtn {
+    height: 125px;
+    width: 125px;
+  }
+  .panicText {
+    line-height: 20px;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-left: -33px;
+  }
+  .showTick {
+    width: 65px;
+    height: 65px;
+  }
+  .infoPanic {
+    width: 10px;
+    height: 10px;
+  }
+  .infoText {
+    font-size: 10px;
+  }
+  .infoDiv {
+    margin-top: 130px;
+  }
+  .countDown {
+    margin: 8px 0px 0px 24px;
+  }
+}
+@media only screen and (min-height: 665px) {
+  .row {
+    margin-bottom: 13.18px;
+  }
+  .icon {
+    width: 48%;
+    height: 130px;
+  }
+  .panicBtn {
+    height: 130px;
+    width: 130px;
+  }
+  .panicText {
+    line-height: 20px;
+    font-size: 20px;
+    margin-top: -21px;
+    margin-left: -35px;
+  }
+  .showTick {
+    width: 65px;
+    height: 65px;
+  }
+  .infoPanic {
+    width: 10px;
+    height: 10px;
+  }
+  .infoText {
+    font-size: 10px;
+  }
+  .infoDiv {
+    margin-top: 130px;
+  }
+  .iconTextDiv {
+    margin-top: 15px;
+  }
+  .countDown {
+    margin: 8px 0px 0px 26px;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .countDown {
+    font-size: 35px;
+    margin: 8px 0px 0px 25px;
+  }
+  .icon {
+    height: 140px;
+  }
+}
+@media only screen and (min-height: 731px) {
+  .icon {
+    height: 150px;
+  }
+  .panicBtn {
+    height: 135px;
+    width: 135px;
+  }
+  .infoPanic {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media only screen and (min-height: 736px) {
+  .countDown {
+    font-size: 35px;
+    margin: 8px 0px 0px 31px;
+  }
+  .panicBtn {
+    height: 140px;
+    width: 140px;
+  }
+  .showTick {
+    width: 80px;
+    height: 80px;
+  }
+  .panicText {
+    line-height: 25px;
+    font-size: 22px;
+    margin-top: -25px;
+    margin-left: -41px;
+  }
+}
+@media only screen and (min-height: 760px) {
+  .icon {
+    height: 155px;
+  }
+  .panicBtn {
+    height: 150px;
+    width: 150px;
+  }
+  .infoPanic {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media only screen and (min-height: 780px) {
+  .icon {
+    height: 160px;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .iconTextDiv {
+    margin-top: 20px;
+  }
+  .icon {
+    height: 165px;
+  }
+}
+
+@media only screen and (min-height: 823px) {
+}

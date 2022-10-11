@@ -1,0 +1,77 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.header,
+.footer,
+ion-content {
+  --background: #042060;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.title {
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 46px;
+  margin-top: 20px;
+  text-align: center;
+}
+.buttons {
+  margin-top: 50px;
+}
+.btn_login,
+.btn_signup,
+.btn_anon {
+  width: 100%;
+  --background: #ffa200;
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin: 30px 0px;
+}
+@media only screen and (min-height: 568px) {
+  .buttons {
+    margin-top: 90px;
+  }
+}
+@media only screen and (min-height: 610px) {
+  .buttons {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-height: 640px) {
+  .buttons {
+    margin-top: 135px;
+  }
+}
+@media only screen and (min-height: 665px) {
+  .buttons {
+    margin-top: 140px;
+  }
+}
+@media only screen and (min-height: 731px) {
+  .buttons {
+    margin-top: 150px;
+  }
+}
+@media only screen and (min-height: 736px) {
+  .buttons {
+    margin-top: 155px;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .buttons {
+    margin-top: 220px;
+  }
+}
+
+@media only screen and (min-height: 823px) {
+  .buttons {
+    margin-top: 250px;
+  }
+}

@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
+.header,
+.footer,
+ion-content {
+  font-family: "Poppins", sans-serif;
+  --background: #042060;
+}
+.backSvg {
+  fill: #fff;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.title {
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 40px;
+  margin-top: 14px;
+  text-align: center;
+}
+.subTitle {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.titleLogin {
+  line-height: 1.2;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 25px;
+}
+.form {
+  margin-top: 20px;
+}
+.input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #002c53;
+  font-size: 14px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.forgotPass {
+  text-align: end;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.btn_login {
+  width: 100%;
+  --background: #ffa200;
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-bottom: 15px;
+}
+.btn_fb {
+  --background: #274c9a;
+}
+.btn_google {
+  --background: #c2463a;
+}
+.btn_fb,
+.btn_google {
+  font-family: "Roboto Slab", serif !important;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  color: #fff;
+  letter-spacing: 0;
+  --border-radius: 5px;
+  margin-bottom: 15px;
+}
+.or {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.fbIcon,
+.googleIcon {
+  position: absolute;
+  right: 85%;
+}
+.socialText {
+  text-transform: none;
+  padding-left: 20px;
+}
+.signupLine {
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.signUp {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.passwordDiv {
+  position: relative;
+}
+.eye {
+  position: absolute;
+  z-index: 9;
+  width: 25px;
+  height: 25px;
+  color: #ffa200;
+  top: 20%;
+  left: 90%;
+}
+.error {
+  color: #ffa200;
+  font-size: 12px;
+  line-height: 20px;
+}
+//spinner
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-height: 568px) {
+  .backSvg {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+  .title {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  .subTitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 5px;
+  }
+  .btn_login {
+    margin-bottom: 5px;
+  }
+  .or {
+    margin-bottom: 5px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 5px;
+  }
+  .forgotPass {
+    margin-bottom: 5px;
+  }
+  .eye {
+    top: 20%;
+    left: 87%;
+  }
+  .fbIcon,
+  .googleIcon {
+    right: 89%;
+  }
+}
+@media only screen and (min-height: 610px) {
+  .title {
+    font-size: 43px;
+  }
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form {
+    margin-top: 5px;
+  }
+  .btn_login {
+    margin-bottom: 5px;
+  }
+  .or {
+    margin-bottom: 15px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 15px;
+  }
+  .forgotPass {
+    margin-bottom: 5px;
+  }
+  .eye {
+    top: 20%;
+    left: 88%;
+  }
+  .fbIcon,
+  .googleIcon {
+    right: 87%;
+  }
+}
+@media only screen and (min-height: 640px) {
+  .error {
+    color: #ffa200;
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  .backSvg {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  .title {
+    font-size: 46px;
+  }
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form {
+    margin-top: 22px;
+  }
+  .btn_login {
+    margin-bottom: 5px;
+  }
+  .or {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 15px;
+  }
+  .forgotPass {
+    margin-bottom: 5px;
+  }
+  .eye {
+    top: 20%;
+    left: 88%;
+  }
+  .fbIcon,
+  .googleIcon {
+    right: 87%;
+  }
+}
+@media only screen and (min-height: 665px) {
+  .subTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .form {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .form {
+    margin-top: 40px;
+  }
+  .btn_login {
+    margin-bottom: 10px;
+  }
+  .or {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .btn_fb,
+  .btn_google {
+    margin-bottom: 20px;
+  }
+  .input {
+    margin-bottom: 15px;
+  }
+  .forgotPass {
+    margin-bottom: 10px;
+  }
+  .btn_login,
+  .btn_fb,
+  .btn_google {
+    --padding-top: 23px;
+    --padding-bottom: 23px;
+  }
+}
+@media only screen and (min-height: 731px) {
+  .title {
+    margin-top: 10px;
+  }
+  .subTitle {
+    margin-bottom: 30px;
+  }
+  .form {
+    margin-top: 40px;
+  }
+  .btn_login {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-height: 736px) {
+  .title {
+    margin-top: 0px;
+  }
+  .subTitle {
+    margin-bottom: 30px;
+  }
+  .form {
+    margin-top: 30px;
+  }
+}
+@media only screen and (min-height: 760px) {
+  .form {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-height: 780px) {
+  .subTitle {
+    margin-bottom: 50px;
+  }
+  .form {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .title {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-height: 823px) {
+  .title {
+    margin-top: 10px;
+  }
+  .subTitle {
+    margin-bottom: 60px;
+  }
+  .form {
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-background-geolocation": {
+      "GOOGLE_PLAY_SERVICES_VERSION": "11+",
+      "ANDROID_SUPPORT_LIBRARY_VERSION": "26+",
+      "ICON": "@mipmap/icon",
+      "SMALL_ICON": "@mipmap/icon",
+      "ACCOUNT_NAME": "@string/app_name",
+      "ACCOUNT_LABEL": "@string/app_name",
+      "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+      "CONTENT_AUTHORITY": "$PACKAGE_NAME",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-googleplus": {
+      "PLAY_SERVICES_VERSION": "15.0.1",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "cordova-plugin-facebook-connect": {
+      "APP_ID": "1788275411378056",
+      "APP_NAME": "wplpolice",
+      "FACEBOOK_URL_SCHEME_SUFFIX": " ",
+      "FACEBOOK_AUTO_LOG_APP_EVENTS": "true",
+      "FACEBOOK_HYBRID_APP_EVENTS": "false",
+      "FACEBOOK_ADVERTISER_ID_COLLECTION": "true",
+      "FACEBOOK_ANDROID_SDK_VERSION": "9.1.1",
+      "FACEBOOK_IOS_SDK_VERSION": "9.2.0",
+      "FACEBOOK_BROWSER_SDK_VERSION": "v9.0",
+      "PACKAGE_NAME": "com.wepol.demo"
+    },
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.wepol.demo"
+    }
+  }
+}

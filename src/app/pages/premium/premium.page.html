@@ -1,0 +1,386 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar class="headBg">
+      <div class="header">
+        <div class="back-btn">
+          <svg
+            (click)="back()"
+            class="backSvg"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            width="14.25px"
+            height="20.43px"
+            viewBox="0 0 792.082 792.082"
+            style="enable-background: new 0 0 792.082 792.082"
+            xml:space="preserve"
+          >
+            <g>
+              <g id="_x37__34_">
+                <g>
+                  <path
+                    d="M317.896,396.024l304.749-276.467c27.36-27.36,27.36-71.677,0-99.037s-71.677-27.36-99.036,0L169.11,342.161
+          c-14.783,14.783-21.302,34.538-20.084,53.897c-1.218,19.359,5.301,39.114,20.084,53.897l354.531,321.606
+          c27.36,27.36,71.677,27.36,99.037,0s27.36-71.677,0-99.036L317.896,396.024z"
+                  />
+                </g>
+              </g>
+            </g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+        <div>
+          <p class="TopHead">Premium</p>
+        </div>
+        <div class="home">
+          <img (click)="home()" src="/assets/icon/home.svg" alt="" />
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <div class="main">
+    <div class="container">
+      <div class="list">
+        <div class="listItem">
+          <div (click)="toggleServices('trackMe')" class="head">
+            <div class="title">Track Me</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="trackMe" class="body">
+            <p class="bodyText">
+              Phone starts tracking user, recording sights and sounds and
+              sending location beacons to pre-set numbers and receptors. If
+              battery goes down or phone is destroyed or snatched it sends last
+              known location. If battery is on it becomes a silent tracking
+              beacon – even if phone is switched off. Receptors can be special
+              police response team or private security or specially designated
+              family or friend.
+            </p>
+            <ion-button class="btn_sub ion-text-uppercase">
+              Subscribe
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('checkBack')" class="head">
+            <div class="title">Check Back</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="checkBack" class="body">
+            <p class="bodyText">
+              System sends a User a prompt that the user is required to respond
+              to periodically. Period can be set for every 15, 20 30 minutes or
+              hourly etc. If user fails to respond once then Phone goes into
+              tracking mode, then escalates until it sets off alarms at the
+              reception point.
+            </p>
+            <ion-grid>
+              <ion-row
+                class="ion-justify-content-between ion-align-items-center"
+              >
+                <ion-col *ngIf="checkBackService" size="12">
+                  <p class="trackingMode">
+                    Tracking Mode on ( {{selectedTime}} interval )
+                  </p>
+                </ion-col>
+                <ion-col *ngIf="!checkBackService" size="5">
+                  <p class="chooseTime">Choose time</p>
+                </ion-col>
+                <ion-col *ngIf="!checkBackService" class="code" size="7">
+                  <ion-input
+                    (click)="openTime()"
+                    readonly
+                    maxlength="3"
+                    class="countryCode"
+                    value="{{selectedTime}}"
+                  ></ion-input>
+                  <div *ngIf="selectTime" class="selectTime">
+                    <p (click)="toggleTime('15 Mins')" class="timeMin">
+                      15 Mins
+                    </p>
+                    <p (click)="toggleTime('20 Mins')" class="timeMin">
+                      20 Mins
+                    </p>
+                    <p (click)="toggleTime('30 Mins')" class="timeMin">
+                      30 Mins
+                    </p>
+                    <p (click)="toggleTime('1 Hour')" class="timeMin">1 Hour</p>
+                  </div>
+                  <svg
+                    class="downCode"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="7.633"
+                    height="7.223"
+                    viewBox="0 0 12.633 7.223"
+                  >
+                    <defs>
+                      <style>
+                        .downa {
+                          fill: #ffa200;
+                        }
+                      </style>
+                    </defs>
+                    <path
+                      class="downa"
+                      d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                      transform="translate(-6.188 -11.246)"
+                    />
+                  </svg>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-button
+              (click)="checkBackBtn()"
+              *ngIf="!checkBackService"
+              class="btn_sub ion-text-uppercase"
+            >
+              Subscribe
+            </ion-button>
+            <ion-button
+              (click)="checkBackBtn()"
+              *ngIf="checkBackService"
+              class="btn_cancel ion-text-uppercase"
+            >
+              Cancel
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('restrictMe')" class="head">
+            <div class="title">Restrict Me</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="restrictMe" class="body">
+            <p class="bodyText">
+              Phone starts geo-fencing. This can be set for family or loved ones
+              when leaving the house or when going jogging etc.
+            </p>
+            <ion-button class="btn_sub ion-text-uppercase">
+              Subscribe
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('vipComplaint')" class="head">
+            <div class="title">VIP Complaint</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="vipComplaint" class="body">
+            <p class="bodyText">
+              This is a complaint filed with the police and formally registered.
+              This is different from a user report. You normally need to visit a
+              police station for this). This menu option opens up a form,
+              identifies the user and goes to a special police team.
+            </p>
+            <ion-button class="btn_sub ion-text-uppercase">
+              Subscribe
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('getLegalAssist')" class="head">
+            <div class="title">Get Legal Assistance</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="getLegalAssist" class="body">
+            <p class="bodyText">
+              Reaches out to external call centre for legal advice.
+            </p>
+            <ion-button
+              (click)="callForLegalAssist()"
+              class="btn_sub ion-text-uppercase"
+            >
+              Call
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('getMedicalAssist')" class="head">
+            <div class="title">Get Medical Assistance</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="getMedicalAssist" class="body">
+            <p class="bodyText">
+              Reaches out to external call centre for legal advice.
+            </p>
+            <ion-button class="btn_sub ion-text-uppercase">
+              Subscribe
+            </ion-button>
+          </div>
+        </div>
+        <div class="listItem">
+          <div (click)="toggleServices('getGeneralAdvice')" class="head">
+            <div class="title">Get General Advice</div>
+            <div class="dropIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12.633"
+                height="7.223"
+                viewBox="0 0 12.633 7.223"
+              >
+                <defs>
+                  <style>
+                    .dropa {
+                      fill: #ffa200;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="dropa"
+                  d="M12.506,16.292l4.777-4.78a.9.9,0,0,1,1.275,0,.91.91,0,0,1,0,1.279l-5.412,5.416a.9.9,0,0,1-1.245.026l-5.45-5.439a.9.9,0,1,1,1.275-1.279Z"
+                  transform="translate(-6.188 -11.246)"
+                />
+              </svg>
+            </div>
+          </div>
+          <div *ngIf="getGeneralAdvice" class="body">
+            <p class="bodyText">
+              Reaches out to external call centre for general advice and
+              information.
+            </p>
+            <ion-button class="btn_sub ion-text-uppercase">
+              Subscribe
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

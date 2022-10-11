@@ -1,0 +1,103 @@
+.header,
+ion-content {
+  font-family: "Poppins", sans-serif;
+}
+ion-content {
+  --background: #f7f7f7;
+}
+
+.backSvg {
+  fill: #fff;
+}
+.headBg {
+  --background: #ffa200;
+  --padding-top: 15px;
+  --padding-bottom: 30px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.TopHead {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+.main {
+  border-radius: 20px;
+  position: relative;
+  margin-top: -20px;
+  padding: 11px;
+  padding-top: 20px;
+  padding-left: 9px;
+  background: #f7f7f7;
+  z-index: 999;
+}
+
+.icon2,
+.icon {
+  padding: 50px 10px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.icon {
+  background: #fff;
+  border: 5px solid #ffa200;
+}
+.iconText {
+  color: #ffa200;
+}
+.iconText,
+.iconText2 {
+  margin-top: 20px;
+  line-height: 33px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.iconText2 {
+  color: #f7f7f7;
+}
+.icon2 {
+  background: #ffa200;
+}
+@media only screen and (min-height: 568px) {
+  .icon2,
+  .icon {
+    padding: 25px 10px 25px 10px;
+  }
+}
+@media only screen and (min-height: 610px) {
+  .icon2,
+  .icon {
+    padding: 40px 10px 40px 10px;
+  }
+}
+@media only screen and (min-height: 640px) {
+  .icon2,
+  .icon {
+    padding: 40px 10px 40px 10px;
+  }
+}
+@media only screen and (min-height: 665px) {
+  .icon2,
+  .icon {
+    padding: 45px 10px 45px 10px;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .icon2,
+  .icon {
+    padding: 50px 10px 50px 10px;
+  }
+}
